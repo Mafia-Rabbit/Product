@@ -3,7 +3,7 @@ import serial.tools.list_ports
 import speech_recognition as sr
 
 def main(page: ft.Page):
-  page.title = "Click Button LED with Voice Control"
+  page.title = "Dr_stone Petrification Ray"
   page.window.width = 300
   page.window.height = 400
   page.window.min_width = 300
@@ -69,7 +69,7 @@ def main(page: ft.Page):
   ports_dropdown = ft.Dropdown()
   refresh_button = ft.Button(text="ポート更新", on_click=update_ports)
   connect_button = ft.Button(text="接続", on_click=connect_serial)
-  command_input = ft.TextField(label="Arduinoコマンド (ON/OFF/exit)")
+  command_input = ft.TextField(label="Arduinoコマンド (～メートル ～秒)")
   send_button = ft.Button(text="コマンド送信", on_click=lambda e: send_command(command_input.value))
   status_label = ft.Text()
   output = ft.Text(value="なにか話してください ...", size=20)
